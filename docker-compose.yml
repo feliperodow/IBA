@@ -1,8 +1,10 @@
+version: '3.8'
 services:
   postgres:
     image: postgres:12-alpine
     restart: always
     environment:
+      POSTGRES_HOST: localhost
       POSTGRES_USER: interviewee
       POSTGRES_PASSWORD: wannasucceed
       POSTGRES_DB: awesomeinc
@@ -11,6 +13,7 @@ services:
       - data:/var/lib/postgresql/data
     ports:
       - ${POSTGRES_PORT:-5432}:5432
+
   pgadmin:
     image: dpage/pgadmin4:6
     restart: always
@@ -21,6 +24,13 @@ services:
       - ./data/servers.json:/pgadmin4/servers.json
     ports:
       - ${PGADMIN_PORT:-8080}:80
+    depends_on:
+      - postgres
+  web:
+    build: iba_api
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
     depends_on:
       - postgres
 volumes:

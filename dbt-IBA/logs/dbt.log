@@ -7043,3 +7043,430 @@ drop view if exists "awesomeinc"."public"."monthly_num_installations__dbt_backup
 Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
 2021-11-11 21:04:28.007786 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0a99706d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0abd026d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fa0abd02af0>]}
 2021-11-11 21:04:28.008167 (MainThread): Flushing usage events
+2021-11-12 17:13:04.296436 (MainThread): Running with dbt=0.21.0
+2021-11-12 17:13:04.366479 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/felipe/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-11-12 17:13:04.367582 (MainThread): Tracking: tracking
+2021-11-12 17:13:04.378844 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d26835d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2832fdc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2684d1f0>]}
+2021-11-12 17:13:04.390945 (MainThread): Partial parsing not enabled
+2021-11-12 17:13:04.400632 (MainThread): Parsing macros/adapters.sql
+2021-11-12 17:13:04.427289 (MainThread): Parsing macros/relations.sql
+2021-11-12 17:13:04.428897 (MainThread): Parsing macros/catalog.sql
+2021-11-12 17:13:04.431438 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-11-12 17:13:04.433405 (MainThread): Parsing macros/core.sql
+2021-11-12 17:13:04.437662 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-11-12 17:13:04.439303 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-11-12 17:13:04.441933 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-11-12 17:13:04.443892 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-11-12 17:13:04.445371 (MainThread): Parsing macros/adapters/common.sql
+2021-11-12 17:13:04.508755 (MainThread): Parsing macros/materializations/test.sql
+2021-11-12 17:13:04.516414 (MainThread): Parsing macros/materializations/helpers.sql
+2021-11-12 17:13:04.527619 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-11-12 17:13:04.553217 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-11-12 17:13:04.557617 (MainThread): Parsing macros/materializations/view/view.sql
+2021-11-12 17:13:04.565270 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-11-12 17:13:04.567148 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-11-12 17:13:04.600570 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-11-12 17:13:04.619935 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-11-12 17:13:04.638725 (MainThread): Parsing macros/materializations/table/table.sql
+2021-11-12 17:13:04.646812 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-11-12 17:13:04.658139 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-11-12 17:13:04.679449 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-11-12 17:13:04.681427 (MainThread): Parsing macros/etc/query.sql
+2021-11-12 17:13:04.682551 (MainThread): Parsing macros/etc/datetime.sql
+2021-11-12 17:13:04.691825 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-11-12 17:13:04.693649 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-11-12 17:13:04.695359 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-11-12 17:13:04.697068 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-11-12 17:13:04.699132 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-11-12 17:13:04.895866 (MainThread): Acquiring new postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:04.908909 (MainThread): Acquiring new postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:04.912279 (MainThread): Acquiring new postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:04.966006 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.IBA_challenge.example
+
+2021-11-12 17:13:04.970957 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '25fc9ffa-4c28-43ee-aac6-d421880f03dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2678ba30>]}
+2021-11-12 17:13:04.976626 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-11-12 17:13:04.977033 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '25fc9ffa-4c28-43ee-aac6-d421880f03dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d26766d90>]}
+2021-11-12 17:13:04.977494 (MainThread): Found 3 models, 0 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-11-12 17:13:04.979138 (MainThread): 
+2021-11-12 17:13:04.979737 (MainThread): Acquiring new postgres connection "master".
+2021-11-12 17:13:04.981677 (ThreadPoolExecutor-0_0): Acquiring new postgres connection "list_awesomeinc".
+2021-11-12 17:13:04.991713 (ThreadPoolExecutor-0_0): Using postgres connection "list_awesomeinc".
+2021-11-12 17:13:04.991946 (ThreadPoolExecutor-0_0): On list_awesomeinc: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "connection_name": "list_awesomeinc"} */
+
+    select distinct nspname from pg_namespace
+  
+2021-11-12 17:13:04.992148 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-11-12 17:13:04.996837 (ThreadPoolExecutor-0_0): SQL status: SELECT 6 in 0.00 seconds
+2021-11-12 17:13:04.998455 (ThreadPoolExecutor-0_0): On list_awesomeinc: Close
+2021-11-12 17:13:05.001461 (ThreadPoolExecutor-1_0): Acquiring new postgres connection "list_awesomeinc_public".
+2021-11-12 17:13:05.007381 (ThreadPoolExecutor-1_0): Using postgres connection "list_awesomeinc_public".
+2021-11-12 17:13:05.007595 (ThreadPoolExecutor-1_0): On list_awesomeinc_public: BEGIN
+2021-11-12 17:13:05.007769 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state closed
+2021-11-12 17:13:05.011457 (ThreadPoolExecutor-1_0): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.011719 (ThreadPoolExecutor-1_0): Using postgres connection "list_awesomeinc_public".
+2021-11-12 17:13:05.011892 (ThreadPoolExecutor-1_0): On list_awesomeinc_public: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "connection_name": "list_awesomeinc_public"} */
+select
+      'awesomeinc' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'awesomeinc' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+2021-11-12 17:13:05.018251 (ThreadPoolExecutor-1_0): SQL status: SELECT 20 in 0.01 seconds
+2021-11-12 17:13:05.019847 (ThreadPoolExecutor-1_0): On list_awesomeinc_public: ROLLBACK
+2021-11-12 17:13:05.020350 (ThreadPoolExecutor-1_0): On list_awesomeinc_public: Close
+2021-11-12 17:13:05.025006 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.025238 (MainThread): On master: BEGIN
+2021-11-12 17:13:05.025427 (MainThread): Opening a new connection, currently in state init
+2021-11-12 17:13:05.028966 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.029227 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.029406 (MainThread): On master: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+2021-11-12 17:13:05.209765 (MainThread): SQL status: SELECT 13 in 0.18 seconds
+2021-11-12 17:13:05.211541 (MainThread): On master: ROLLBACK
+2021-11-12 17:13:05.211928 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.212128 (MainThread): On master: BEGIN
+2021-11-12 17:13:05.212719 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.212927 (MainThread): On master: COMMIT
+2021-11-12 17:13:05.213100 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.213261 (MainThread): On master: COMMIT
+2021-11-12 17:13:05.213610 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-11-12 17:13:05.213819 (MainThread): On master: Close
+2021-11-12 17:13:05.214217 (MainThread): 18:13:05 | Concurrency: 2 threads (target='dev')
+2021-11-12 17:13:05.214447 (MainThread): 18:13:05 | 
+2021-11-12 17:13:05.216406 (Thread-1): Began running node model.IBA_challenge.best_market_region
+2021-11-12 17:13:05.216668 (Thread-2): Began running node model.IBA_challenge.best_product_category_revenue
+2021-11-12 17:13:05.217028 (Thread-1): 18:13:05 | 1 of 3 START view model public.best_market_region.................... [RUN]
+2021-11-12 17:13:05.217327 (Thread-2): 18:13:05 | 2 of 3 START view model public.best_product_category_revenue......... [RUN]
+2021-11-12 17:13:05.217778 (Thread-1): Acquiring new postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.218363 (Thread-2): Acquiring new postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.218591 (Thread-1): Compiling model.IBA_challenge.best_market_region
+2021-11-12 17:13:05.218800 (Thread-2): Compiling model.IBA_challenge.best_product_category_revenue
+2021-11-12 17:13:05.220123 (Thread-1): Writing injected SQL for node "model.IBA_challenge.best_market_region"
+2021-11-12 17:13:05.221382 (Thread-2): Writing injected SQL for node "model.IBA_challenge.best_product_category_revenue"
+2021-11-12 17:13:05.225115 (Thread-2): finished collecting timing info
+2021-11-12 17:13:05.225352 (Thread-1): finished collecting timing info
+2021-11-12 17:13:05.256478 (Thread-1): Writing runtime SQL for node "model.IBA_challenge.best_market_region"
+2021-11-12 17:13:05.255842 (Thread-2): Writing runtime SQL for node "model.IBA_challenge.best_product_category_revenue"
+2021-11-12 17:13:05.257225 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.257461 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.257632 (Thread-1): On model.IBA_challenge.best_market_region: BEGIN
+2021-11-12 17:13:05.257844 (Thread-2): On model.IBA_challenge.best_product_category_revenue: BEGIN
+2021-11-12 17:13:05.258046 (Thread-1): Opening a new connection, currently in state closed
+2021-11-12 17:13:05.258235 (Thread-2): Opening a new connection, currently in state init
+2021-11-12 17:13:05.261693 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.261962 (Thread-2): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.262236 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.262457 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.262659 (Thread-1): On model.IBA_challenge.best_market_region: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_market_region"} */
+
+  create view "awesomeinc"."public"."best_market_region__dbt_tmp" as (
+    --Which region of the world is our best market.
+
+with customer_expenses as(
+	select cu.id, sum(cast(p.price as float)) as expenses
+	from customer as cu, installation as ins, product as p
+	where cu.id = ins.customer_id and p.id = ins.product_id
+	group by cu.id
+),
+
+country_expenses as (
+	select cu.country_id, sum(ce.expenses) as expenses
+	from customer as cu, customer_expenses as ce
+	where cu.id = ce.id
+	group by cu.country_id
+),
+
+region_expenses as (
+	select co.region, sum(ce.expenses) as expenses
+	from country as co, country_expenses as ce
+	where co.id = ce.country_id
+	group by co.region
+),
+
+best_region as (
+	select region, expenses
+	from region_expenses
+	where expenses = (select max(expenses) from region_expenses)
+)
+
+select * from best_region
+  );
+
+2021-11-12 17:13:05.262855 (Thread-2): On model.IBA_challenge.best_product_category_revenue: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_product_category_revenue"} */
+
+  create view "awesomeinc"."public"."best_product_category_revenue__dbt_tmp" as (
+    --We would also like to see which product category brings us more revenues
+
+with product_info as (
+	select p.id, pc.name as prod_cat_name, p.reference, p.name as prod_name, p.price
+	from product_category as pc, product as p
+	where p.category_id = pc.id
+	order by cast(p.price as float) asc
+),
+
+installations_per_product as (
+	select product_id, count(product_id) as sells
+	from installation
+	group by product_id
+),
+
+total_sells_per_product as (
+	select pi.prod_cat_name, ipp.sells, pi.price, ipp.sells*cast(pi.price as float) as revenue
+	from product_info as pi, installations_per_product as ipp
+	where pi.id = ipp.product_id
+),
+
+best_product_category_revenue as (
+	select prod_cat_name, revenue
+	from total_sells_per_product
+	where revenue = (select max(revenue) from total_sells_per_product)
+)
+
+select * from best_product_category_revenue
+  );
+
+2021-11-12 17:13:05.272566 (Thread-1): SQL status: CREATE VIEW in 0.01 seconds
+2021-11-12 17:13:05.272845 (Thread-2): SQL status: CREATE VIEW in 0.01 seconds
+2021-11-12 17:13:05.279167 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.281370 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.281618 (Thread-1): On model.IBA_challenge.best_market_region: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_market_region"} */
+alter table "awesomeinc"."public"."best_market_region" rename to "best_market_region__dbt_backup"
+2021-11-12 17:13:05.281823 (Thread-2): On model.IBA_challenge.best_product_category_revenue: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_product_category_revenue"} */
+alter table "awesomeinc"."public"."best_product_category_revenue" rename to "best_product_category_revenue__dbt_backup"
+2021-11-12 17:13:05.282942 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.283153 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.285228 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.288420 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.288655 (Thread-2): On model.IBA_challenge.best_product_category_revenue: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_product_category_revenue"} */
+alter table "awesomeinc"."public"."best_product_category_revenue__dbt_tmp" rename to "best_product_category_revenue"
+2021-11-12 17:13:05.288858 (Thread-1): On model.IBA_challenge.best_market_region: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_market_region"} */
+alter table "awesomeinc"."public"."best_market_region__dbt_tmp" rename to "best_market_region"
+2021-11-12 17:13:05.289766 (Thread-2): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.289974 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.296510 (Thread-2): On model.IBA_challenge.best_product_category_revenue: COMMIT
+2021-11-12 17:13:05.297559 (Thread-1): On model.IBA_challenge.best_market_region: COMMIT
+2021-11-12 17:13:05.297780 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.297990 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.298180 (Thread-2): On model.IBA_challenge.best_product_category_revenue: COMMIT
+2021-11-12 17:13:05.298369 (Thread-1): On model.IBA_challenge.best_market_region: COMMIT
+2021-11-12 17:13:05.300377 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-11-12 17:13:05.305247 (Thread-1): Using postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:05.305483 (Thread-1): On model.IBA_challenge.best_market_region: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_market_region"} */
+drop view if exists "awesomeinc"."public"."best_market_region__dbt_backup" cascade
+2021-11-12 17:13:05.305712 (Thread-2): SQL status: COMMIT in 0.01 seconds
+2021-11-12 17:13:05.307146 (Thread-2): Using postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:05.307347 (Thread-2): On model.IBA_challenge.best_product_category_revenue: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.best_product_category_revenue"} */
+drop view if exists "awesomeinc"."public"."best_product_category_revenue__dbt_backup" cascade
+2021-11-12 17:13:05.308781 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-11-12 17:13:05.310153 (Thread-1): finished collecting timing info
+2021-11-12 17:13:05.310413 (Thread-1): On model.IBA_challenge.best_market_region: Close
+2021-11-12 17:13:05.310621 (Thread-2): SQL status: DROP VIEW in 0.00 seconds
+2021-11-12 17:13:05.311071 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25fc9ffa-4c28-43ee-aac6-d421880f03dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d268bb340>]}
+2021-11-12 17:13:05.312752 (Thread-2): finished collecting timing info
+2021-11-12 17:13:05.313464 (Thread-1): 18:13:05 | 1 of 3 OK created view model public.best_market_region............... [CREATE VIEW in 0.09s]
+2021-11-12 17:13:05.313760 (Thread-2): On model.IBA_challenge.best_product_category_revenue: Close
+2021-11-12 17:13:05.314163 (Thread-1): Finished running node model.IBA_challenge.best_market_region
+2021-11-12 17:13:05.314540 (Thread-1): Began running node model.IBA_challenge.monthly_num_installations
+2021-11-12 17:13:05.315097 (Thread-2): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25fc9ffa-4c28-43ee-aac6-d421880f03dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d25f506d0>]}
+2021-11-12 17:13:05.315539 (Thread-1): 18:13:05 | 3 of 3 START view model public.monthly_num_installations............. [RUN]
+2021-11-12 17:13:05.316049 (Thread-2): 18:13:05 | 2 of 3 OK created view model public.best_product_category_revenue.... [CREATE VIEW in 0.10s]
+2021-11-12 17:13:05.316445 (Thread-1): Acquiring new postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.316647 (Thread-2): Finished running node model.IBA_challenge.best_product_category_revenue
+2021-11-12 17:13:05.316879 (Thread-1): Compiling model.IBA_challenge.monthly_num_installations
+2021-11-12 17:13:05.318281 (Thread-1): Writing injected SQL for node "model.IBA_challenge.monthly_num_installations"
+2021-11-12 17:13:05.318844 (Thread-1): finished collecting timing info
+2021-11-12 17:13:05.321268 (Thread-1): Writing runtime SQL for node "model.IBA_challenge.monthly_num_installations"
+2021-11-12 17:13:05.321881 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.322056 (Thread-1): On model.IBA_challenge.monthly_num_installations: BEGIN
+2021-11-12 17:13:05.322225 (Thread-1): Opening a new connection, currently in state closed
+2021-11-12 17:13:05.325849 (Thread-1): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.326143 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.326327 (Thread-1): On model.IBA_challenge.monthly_num_installations: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.monthly_num_installations"} */
+
+  create view "awesomeinc"."public"."monthly_num_installations__dbt_tmp" as (
+    --We would like to report on the number of installations
+--that the company is doing every month in order to see if the business is growing.
+
+with num_installations as (
+    select
+        extract(year from installation_date) "Year",
+        extract(month from installation_date) "Month",
+        count(*)
+    from
+        installation
+    group by
+        extract(year from installation_date),
+        extract(month from installation_date)
+    order by 1, 2
+)
+
+select * from num_installations
+  );
+
+2021-11-12 17:13:05.330937 (Thread-1): SQL status: CREATE VIEW in 0.00 seconds
+2021-11-12 17:13:05.333449 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.333678 (Thread-1): On model.IBA_challenge.monthly_num_installations: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.monthly_num_installations"} */
+alter table "awesomeinc"."public"."monthly_num_installations" rename to "monthly_num_installations__dbt_backup"
+2021-11-12 17:13:05.334365 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.336317 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.336511 (Thread-1): On model.IBA_challenge.monthly_num_installations: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.monthly_num_installations"} */
+alter table "awesomeinc"."public"."monthly_num_installations__dbt_tmp" rename to "monthly_num_installations"
+2021-11-12 17:13:05.337195 (Thread-1): SQL status: ALTER TABLE in 0.00 seconds
+2021-11-12 17:13:05.338295 (Thread-1): On model.IBA_challenge.monthly_num_installations: COMMIT
+2021-11-12 17:13:05.338486 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.338649 (Thread-1): On model.IBA_challenge.monthly_num_installations: COMMIT
+2021-11-12 17:13:05.340140 (Thread-1): SQL status: COMMIT in 0.00 seconds
+2021-11-12 17:13:05.341729 (Thread-1): Using postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:05.342017 (Thread-1): On model.IBA_challenge.monthly_num_installations: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "IBA_challenge", "target_name": "dev", "node_id": "model.IBA_challenge.monthly_num_installations"} */
+drop view if exists "awesomeinc"."public"."monthly_num_installations__dbt_backup" cascade
+2021-11-12 17:13:05.344483 (Thread-1): SQL status: DROP VIEW in 0.00 seconds
+2021-11-12 17:13:05.345891 (Thread-1): finished collecting timing info
+2021-11-12 17:13:05.346193 (Thread-1): On model.IBA_challenge.monthly_num_installations: Close
+2021-11-12 17:13:05.346850 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '25fc9ffa-4c28-43ee-aac6-d421880f03dc', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d267879d0>]}
+2021-11-12 17:13:05.347615 (Thread-1): 18:13:05 | 3 of 3 OK created view model public.monthly_num_installations........ [CREATE VIEW in 0.03s]
+2021-11-12 17:13:05.348154 (Thread-1): Finished running node model.IBA_challenge.monthly_num_installations
+2021-11-12 17:13:05.350145 (MainThread): Acquiring new postgres connection "master".
+2021-11-12 17:13:05.350455 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.350631 (MainThread): On master: BEGIN
+2021-11-12 17:13:05.350803 (MainThread): Opening a new connection, currently in state closed
+2021-11-12 17:13:05.354181 (MainThread): SQL status: BEGIN in 0.00 seconds
+2021-11-12 17:13:05.354453 (MainThread): On master: COMMIT
+2021-11-12 17:13:05.354620 (MainThread): Using postgres connection "master".
+2021-11-12 17:13:05.354776 (MainThread): On master: COMMIT
+2021-11-12 17:13:05.355057 (MainThread): SQL status: COMMIT in 0.00 seconds
+2021-11-12 17:13:05.355258 (MainThread): On master: Close
+2021-11-12 17:13:05.355757 (MainThread): 18:13:05 | 
+2021-11-12 17:13:05.355984 (MainThread): 18:13:05 | Finished running 3 view models in 0.38s.
+2021-11-12 17:13:05.356245 (MainThread): Connection 'master' was properly closed.
+2021-11-12 17:13:05.356407 (MainThread): Connection 'model.IBA_challenge.monthly_num_installations' was properly closed.
+2021-11-12 17:13:05.356558 (MainThread): Connection 'model.IBA_challenge.best_product_category_revenue' was properly closed.
+2021-11-12 17:13:05.360960 (MainThread): 
+2021-11-12 17:13:05.361209 (MainThread): Completed successfully
+2021-11-12 17:13:05.361413 (MainThread): 
+Done. PASS=3 WARN=0 ERROR=0 SKIP=0 TOTAL=3
+2021-11-12 17:13:05.361679 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d267798e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d28b4ec40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8d2678bfd0>]}
+2021-11-12 17:13:05.361957 (MainThread): Flushing usage events
+2021-11-12 17:13:49.190114 (MainThread): Running with dbt=0.21.0
+2021-11-12 17:13:49.260523 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.test.TestTask'>, data=False, debug=False, defer=None, exclude=None, fail_fast=False, greedy=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/felipe/.dbt', project_dir=None, record_timing_info=None, rpc_method='test', schema=False, select=None, selector_name=None, single_threaded=False, state=None, store_failures=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='test', write_json=True)
+2021-11-12 17:13:49.261557 (MainThread): Tracking: tracking
+2021-11-12 17:13:49.274279 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65d3ed30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf6783adc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65d572b0>]}
+2021-11-12 17:13:49.290766 (MainThread): Partial parsing not enabled
+2021-11-12 17:13:49.305346 (MainThread): Parsing macros/adapters.sql
+2021-11-12 17:13:49.334407 (MainThread): Parsing macros/relations.sql
+2021-11-12 17:13:49.335960 (MainThread): Parsing macros/catalog.sql
+2021-11-12 17:13:49.338407 (MainThread): Parsing macros/materializations/snapshot_merge.sql
+2021-11-12 17:13:49.340270 (MainThread): Parsing macros/core.sql
+2021-11-12 17:13:49.344394 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-11-12 17:13:49.345996 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-11-12 17:13:49.348494 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-11-12 17:13:49.350352 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-11-12 17:13:49.351728 (MainThread): Parsing macros/adapters/common.sql
+2021-11-12 17:13:49.412682 (MainThread): Parsing macros/materializations/test.sql
+2021-11-12 17:13:49.420019 (MainThread): Parsing macros/materializations/helpers.sql
+2021-11-12 17:13:49.430722 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-11-12 17:13:49.455558 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-11-12 17:13:49.459924 (MainThread): Parsing macros/materializations/view/view.sql
+2021-11-12 17:13:49.467529 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-11-12 17:13:49.469403 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-11-12 17:13:49.502557 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-11-12 17:13:49.521383 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-11-12 17:13:49.536410 (MainThread): Parsing macros/materializations/table/table.sql
+2021-11-12 17:13:49.544315 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-11-12 17:13:49.555207 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-11-12 17:13:49.576264 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-11-12 17:13:49.578232 (MainThread): Parsing macros/etc/query.sql
+2021-11-12 17:13:49.579346 (MainThread): Parsing macros/etc/datetime.sql
+2021-11-12 17:13:49.588737 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-11-12 17:13:49.590558 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-11-12 17:13:49.592247 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-11-12 17:13:49.593927 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-11-12 17:13:49.595947 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-11-12 17:13:49.788804 (MainThread): Acquiring new postgres connection "model.IBA_challenge.monthly_num_installations".
+2021-11-12 17:13:49.801635 (MainThread): Acquiring new postgres connection "model.IBA_challenge.best_product_category_revenue".
+2021-11-12 17:13:49.804942 (MainThread): Acquiring new postgres connection "model.IBA_challenge.best_market_region".
+2021-11-12 17:13:49.851135 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.IBA_challenge.example
+
+2021-11-12 17:13:49.856117 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c8cbd325-f8a7-4a10-8276-b313e8f3a95d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65c9baf0>]}
+2021-11-12 17:13:49.861396 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-11-12 17:13:49.861858 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c8cbd325-f8a7-4a10-8276-b313e8f3a95d', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65c77c10>]}
+2021-11-12 17:13:49.862324 (MainThread): Found 3 models, 0 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 0 seed files, 0 sources, 0 exposures
+2021-11-12 17:13:49.863584 (MainThread): 
+WARNING: Nothing to do. Try checking your model configs and model specification args
+2021-11-12 17:13:49.867919 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65c77fa0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65c773d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faf65c77550>]}
+2021-11-12 17:13:49.868251 (MainThread): Flushing usage events
+2021-11-12 17:13:50.394889 (MainThread): Connection 'model.IBA_challenge.best_market_region' was properly closed.
